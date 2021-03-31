@@ -21,6 +21,7 @@ interface ChallengesContextData {
   startNewChallenge: () => void;
   resetChallenge: () => void;
   completeChallenge: () => void;
+  closeLevelUpModal: () => void;
 }
 
 interface ChallengesProviderProps {
@@ -44,6 +45,7 @@ export function ChallengesProvider({
     rest.challengeCompleted ?? 0
   );
   const [activeChallenge, setActiveChallenge] = useState(null);
+  const [isLevelUpModelOpen, setIsLevelUpModalOpen] = useState(false);
 
   useEffect(() => {
     Notification.requestPermission();
@@ -57,7 +59,12 @@ export function ChallengesProvider({
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
-  const levelUp = () => setLevel(level + 1);
+  const levelUp = () => {
+    setLevel(level + 1);
+    setIsLevelUpModalOpen(true);
+  };
+
+  const closeLevelUpModal = () => setIsLevelUpModalOpen(false);
 
   const startNewChallenge = () => {
     const randomChallengeIndex = Math.floor(Math.random() * challenges.length);
@@ -103,10 +110,11 @@ export function ChallengesProvider({
         startNewChallenge,
         resetChallenge,
         completeChallenge,
+        closeLevelUpModal,
       }}
     >
       {children}
-      <LevelUpModal />
+      {isLevelUpModelOpen && <LevelUpModal />}
     </ChallengesContext.Provider>
   );
 }
