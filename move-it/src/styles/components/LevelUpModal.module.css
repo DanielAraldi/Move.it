@@ -48,3 +48,9 @@
   border: 0;
   font-size: 0px;
 }
+
+@media (max-width: 540px) {
+  .container {
+    max-width: 280px;
+  }
+}
