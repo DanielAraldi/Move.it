@@ -40,10 +40,6 @@ export default class MyDocument extends Document {
           <meta name="coverage" content="Worldwide" />
           <meta name="distribution" content="Global" />
           <meta name="rating" content="General" />
-          <meta name="revisit-after" content="7 days" />
-          <meta http-equiv="Expires" content="0" />
-          <meta http-equiv="Pragma" content="no-cache" />
-          <meta http-equiv="Cache-Control" content="no-cache" />
 
           {/* Site Meta Tags */}
           <meta property="og:title" content="Move.it" />
