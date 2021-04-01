@@ -14,3 +14,15 @@
   gap: 6.25rem;
   align-content: center;
 }
+
+@media (max-width: 720px) {
+  .container section {
+    margin-top: 3rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .container section div + div {
+    padding-bottom: 2.5rem;
+  }
+}
