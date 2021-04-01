@@ -5,37 +5,16 @@ import challenges from "../../challenges.json";
 
 import { LevelUpModal } from "../components/LevelUpMoal";
 
-interface Challenge {
-  type: "body" | "eye";
-  description: string;
-  amount: number;
-}
-
-interface ChallengesContextData {
-  level: number;
-  currentExperience: number;
-  experienceToNextLevel: number;
-  challengeCompleted: number;
-  activeChallenge: Challenge;
-  levelUp: () => void;
-  startNewChallenge: () => void;
-  resetChallenge: () => void;
-  completeChallenge: () => void;
-  closeLevelUpModal: () => void;
-}
-
 interface ChallengesProviderProps {
   children: ReactNode;
-  level: number;
-  currentExperience: number;
-  challengeCompleted: number;
+  rest: HomeProps;
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData);
 
 export function ChallengesProvider({
   children,
-  ...rest
+  rest,
 }: ChallengesProviderProps) {
   const [level, setLevel] = useState(rest.level ?? 1); // If rest.level isn't exists insert 1
   const [currentExperience, setCurrentExperience] = useState(

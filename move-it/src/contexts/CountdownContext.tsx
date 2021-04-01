@@ -7,15 +7,6 @@ import {
 } from "react";
 import { ChallengesContext } from "./ChallengeContext";
 
-interface CountdownContextData {
-  minutes: number;
-  seconds: number;
-  hasFinished: boolean;
-  isActive: boolean;
-  startCountdown: () => void;
-  resetCountdown: () => void;
-}
-
 interface CountdownContextProps {
   children: ReactNode;
 }
