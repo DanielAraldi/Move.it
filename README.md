@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="MOve.it" src=".github/moveit-logo.svg" height="100px" />
+    <img alt="Move.it" src=".github/moveit-logo.svg" height="100px" />
     <br>Next Level Week #4 - Trilha ReactJS<br/>
     TypeScript | Next.js | ReactJS
 </h1>
