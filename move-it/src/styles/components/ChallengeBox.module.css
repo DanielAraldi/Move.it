@@ -1,9 +1,9 @@
 .challengeBoxContainer {
-  height: 90%;
+  height: 92%;
   background: var(--white);
   border-radius: 5px;
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
-  margin-top: 10%;
+  margin-top: 8%;
   padding: 1.5rem 2rem;
   display: flex;
   flex-direction: column;
