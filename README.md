@@ -56,9 +56,9 @@ Essa aplicação foi realizada durante a **Next Level Week #4**, projeto da [Roc
   # WEB
   $ cd move-it
   # Instalando as dependências do projeto.
-  $ npm install # ou yarn install
+  $ ou yarn install # ou npm install
   # Inicie a aplicação web
-  $ npm run dev # ou yarn dev
+  $ yarn dev # ou npm run dev
 ```
 
 ## :memo: Licença
