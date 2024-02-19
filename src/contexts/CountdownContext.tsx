@@ -4,8 +4,8 @@ import {
   useContext,
   useEffect,
   useState,
-} from "react";
-import { ChallengesContext } from "./ChallengeContext";
+} from 'react';
+import { ChallengesContext } from './ChallengeContext';
 
 interface CountdownContextProps {
   children: ReactNode;

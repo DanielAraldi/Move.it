@@ -1,16 +1,16 @@
-import Head from "next/head";
-import { GetServerSideProps } from "next";
+import Head from 'next/head';
+import { GetServerSideProps } from 'next';
 
-import { ChallengeBox } from "../components/ChallengeBox";
-import { CompletedChallenges } from "../components/CompletedChallenges";
-import { Countdown } from "../components/Countdown";
-import { ExperienceBar } from "../components/ExperienceBar";
-import { Profile } from "../components/Profile";
+import { ChallengeBox } from '../components/ChallengeBox';
+import { CompletedChallenges } from '../components/CompletedChallenges';
+import { Countdown } from '../components/Countdown';
+import { ExperienceBar } from '../components/ExperienceBar';
+import { Profile } from '../components/Profile';
 
-import { ChallengesProvider } from "../contexts/ChallengeContext";
-import { CountdownProvider } from "../contexts/CountdownContext";
+import { ChallengesProvider } from '../contexts/ChallengeContext';
+import { CountdownProvider } from '../contexts/CountdownContext';
 
-import styles from "../styles/pages/Home.module.css";
+import styles from '../styles/pages/Home.module.css';
 
 export default function Home({
   level,
@@ -49,7 +49,7 @@ export default function Home({
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps = async ctx => {
   const { level, currentExperience, challengeCompleted } = ctx.req.cookies;
 
   return {

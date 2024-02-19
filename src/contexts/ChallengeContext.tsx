@@ -1,9 +1,9 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
-import Cookies from "js-cookie";
+import { createContext, ReactNode, useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
 
-import challenges from "../../challenges.json";
+import challenges from '../../challenges.json';
 
-import { LevelUpModal } from "../components/LevelUpMoal";
+import { LevelUpModal } from '../components/LevelUpMoal';
 
 interface ChallengesProviderProps {
   children: ReactNode;
@@ -31,9 +31,9 @@ export function ChallengesProvider({
   }, []);
 
   useEffect(() => {
-    Cookies.set("level", String(level));
-    Cookies.set("currentExperience", String(currentExperience));
-    Cookies.set("challengeCompleted", String(challengeCompleted));
+    Cookies.set('level', String(level));
+    Cookies.set('currentExperience', String(currentExperience));
+    Cookies.set('challengeCompleted', String(challengeCompleted));
   }, [level, currentExperience, challengeCompleted]);
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
@@ -50,10 +50,10 @@ export function ChallengesProvider({
     const challenge = challenges[randomChallengeIndex];
     setActiveChallenge(challenge);
 
-    new Audio("/notification.mp3").play();
+    new Audio('/notification.mp3').play();
 
-    if (Notification.permission === "granted") {
-      new Notification("Novo desafio 🎉", {
+    if (Notification.permission === 'granted') {
+      new Notification('Novo desafio 🎉', {
         body: `Valendo ${challenge.amount} xp!!!`,
       });
     }
